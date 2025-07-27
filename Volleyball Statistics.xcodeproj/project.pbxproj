@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3D68442E362C4500E963D9 /* vballdata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D68422E362C4500E963D9 /* vballdata.xcdatamodeld */; };
+		0F3D68462E362CF100E963D9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D68452E362CE500E963D9 /* Persistence.swift */; };
 		0F753AC62E36205B002C83FE /* TeamPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F753AC52E362056002C83FE /* TeamPage.swift */; };
 		378C58642E266014002A6A6C /* Volleyball_StatisticsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C58632E266014002A6A6C /* Volleyball_StatisticsApp.swift */; };
 		378C58662E266014002A6A6C /* TeamStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C58652E266014002A6A6C /* TeamStatsView.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3D68432E362C4500E963D9 /* vballdata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = vballdata.xcdatamodel; sourceTree = "<group>"; };
+		0F3D68452E362CE500E963D9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0F753AC52E362056002C83FE /* TeamPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPage.swift; sourceTree = "<group>"; };
 		378C58602E266014002A6A6C /* Volleyball Statistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Volleyball Statistics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		378C58632E266014002A6A6C /* Volleyball_StatisticsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volleyball_StatisticsApp.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		378C58572E266014002A6A6C = {
 			isa = PBXGroup;
 			children = (
+				0F3D68452E362CE500E963D9 /* Persistence.swift */,
+				0F3D68422E362C4500E963D9 /* vballdata.xcdatamodeld */,
 				378C58752E26651C002A6A6C /* Volleyball-Statistics-Info.plist */,
 				378C58732E26644A002A6A6C /* Teko-Regular.ttf */,
 				8D785BDC2E36236600DFEDAE /* Game Tracker */,
@@ -186,8 +192,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3D68442E362C4500E963D9 /* vballdata.xcdatamodeld in Sources */,
 				378C587B2E26AE8C002A6A6C /* TeamDefendingOverall.swift in Sources */,
 				378C58812E26AEAC002A6A6C /* TeamBlockingOverall.swift in Sources */,
+				0F3D68462E362CF100E963D9 /* Persistence.swift in Sources */,
 				0F753AC62E36205B002C83FE /* TeamPage.swift in Sources */,
 				378C58852E26BA6B002A6A6C /* NewGame.swift in Sources */,
 				378C58792E26AE7B002A6A6C /* TeamServeReceptionOverall.swift in Sources */,
@@ -404,6 +412,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0F3D68422E362C4500E963D9 /* vballdata.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0F3D68432E362C4500E963D9 /* vballdata.xcdatamodel */,
+			);
+			currentVersion = 0F3D68432E362C4500E963D9 /* vballdata.xcdatamodel */;
+			path = vballdata.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 378C58582E266014002A6A6C /* Project object */;
 }

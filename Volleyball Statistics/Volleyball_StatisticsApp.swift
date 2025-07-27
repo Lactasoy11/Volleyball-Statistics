@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct Volleyball_StatisticsApp: App {
+    let persistenceController = PersistenceController.shared
+
     var body: some Scene {
         WindowGroup {
                
@@ -16,5 +18,6 @@ struct Volleyball_StatisticsApp: App {
             
 
         }
+        .environment(\.managedObjectContext, persistenceController.container.viewContext)
     }
 }
