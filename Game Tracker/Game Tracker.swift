@@ -7,9 +7,18 @@
 
 
 import SwiftUI
+import CoreData
 
 struct GameTrackerView: View {
     // MARK: – State
+    @FetchRequest(
+        entity: PlayerStats.entity(),
+        sortDescriptors: []
+    ) var playerStats: FetchedResults<PlayerStats>
+    
+    @Environment(\.managedObjectContext) private var viewContext
+
+
     @State private var players: [String] = ["Player 1", "Player 2", "Player 3", "Player 4", "Player 5", "Player 6", "Player 7"]
     @State private var selectedPlayerIndex: Int? = nil
     
@@ -99,6 +108,21 @@ struct GameTrackerView: View {
                                 Spacer()
                                 Button("Confirm") {
                                     // handle confirm
+                                    guard let selectedIndex = selectedPlayerIndex else { return }
+                                        let playerName = players[selectedIndex]
+
+                                        // Check if player already exists in Core Data
+                                        let stat = playerStats.first(where: { $0.playerName == playerName }) ?? PlayerStats(context: viewContext)
+                                        stat.playerName = playerName
+
+                                        // Example: if Blocking category's selected stat is "Block"
+                                        if statSelections[.blocking] == "Block" {
+                                            stat.blocks += 1
+                                        }
+
+                                        if statSelections[.blocking] == "Error" {
+                                            stat.blockErrors += 1
+                                        }
                                 }
                                 .frame(width: 120, height: 44)
                                 .background(Color.accentColor)
