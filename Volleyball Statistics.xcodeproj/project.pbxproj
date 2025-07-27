@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F753AC62E36205B002C83FE /* TeamPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F753AC52E362056002C83FE /* TeamPage.swift */; };
 		378C58642E266014002A6A6C /* Volleyball_StatisticsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C58632E266014002A6A6C /* Volleyball_StatisticsApp.swift */; };
 		378C58662E266014002A6A6C /* TeamStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378C58652E266014002A6A6C /* TeamStatsView.swift */; };
 		378C58682E266016002A6A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378C58672E266016002A6A6C /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F753AC52E362056002C83FE /* TeamPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPage.swift; sourceTree = "<group>"; };
 		378C58602E266014002A6A6C /* Volleyball Statistics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Volleyball Statistics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		378C58632E266014002A6A6C /* Volleyball_StatisticsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volleyball_StatisticsApp.swift; sourceTree = "<group>"; };
 		378C58652E266014002A6A6C /* TeamStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStatsView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				378C58652E266014002A6A6C /* TeamStatsView.swift */,
 				378C58842E26BA6B002A6A6C /* NewGame.swift */,
 				378C58712E2660B0002A6A6C /* MyStatsView.swift */,
+				0F753AC52E362056002C83FE /* TeamPage.swift */,
 				378C58772E26AE68002A6A6C /* Team Stat Views */,
 				378C58672E266016002A6A6C /* Assets.xcassets */,
 				378C58692E266016002A6A6C /* Preview Content */,
@@ -177,6 +180,7 @@
 			files = (
 				378C587B2E26AE8C002A6A6C /* TeamDefendingOverall.swift in Sources */,
 				378C58812E26AEAC002A6A6C /* TeamBlockingOverall.swift in Sources */,
+				0F753AC62E36205B002C83FE /* TeamPage.swift in Sources */,
 				378C58852E26BA6B002A6A6C /* NewGame.swift in Sources */,
 				378C58792E26AE7B002A6A6C /* TeamServeReceptionOverall.swift in Sources */,
 				378C58832E26AEBB002A6A6C /* TeamServingOverall.swift in Sources */,
