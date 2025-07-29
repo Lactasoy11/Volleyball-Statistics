@@ -83,15 +83,15 @@ struct NewGame: View {
                 }
 
                 // Enter Button
-                Button(action: {
-                    // Handle enter logic here
-                }) {
+                NavigationLink(destination: GameTrackerView()) {
                     Text("Enter")
-                        .frame(maxWidth: .infinity, minHeight: 44)
-                        .foregroundColor(.white)
+                        .font(.title2)
+                        .padding()
+                        .frame(maxWidth: .infinity)
                         .background(Color.blue)
-                        .cornerRadius(8)
-                }
+                        .foregroundColor(.white)
+                        .cornerRadius(12)
+                } 
 
                 Spacer()
             }
