@@ -3,6 +3,8 @@ import SwiftUI
 struct TeamSettingOverall: View {
     @Environment(\.dismiss) var dismiss
 
+
+
     var totalSets = 47
     var dumpErrors = 2
     var setErrors = 4
@@ -15,7 +17,7 @@ struct TeamSettingOverall: View {
 
     var body: some View {
         NavigationStack {
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 30) {
                     Text("Setting Overview")
                         .font(.largeTitle)
@@ -40,7 +42,14 @@ struct TeamSettingOverall: View {
                             ]
                         )
 
-                        StatBox(color: .orange, label: "Dumps", value: "\(dumps)")
+                        ExpandableStatBox(
+                            color: .orange,
+                            label: "Dumps",
+                            value: "\(dumps)",
+                            subStats: [
+                                ("Dumps", "\(dumps)"),
+                            ]
+                        )
 
                         ExpandableStatBox(
                             color: .purple,
@@ -51,6 +60,9 @@ struct TeamSettingOverall: View {
                                 ("Assist", "\(assists)")
                             ]
                         )
+                        
+
+
                     }
                     .padding(.horizontal)
 
@@ -61,16 +73,17 @@ struct TeamSettingOverall: View {
             .navigationTitle("My Stats")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { dismiss() }) {
-                        Image(systemName: "chevron.left")
-                            .font(.headline)
-                    }
+
+                    
+
+
+
+
                 }
             }
         }
     }
-}
+
 
 struct DonutChartView: View {
     var total: Int
@@ -235,7 +248,7 @@ struct ExpandableStatBox: View {
                                 .foregroundColor(.gray)
                         }
                         .padding(.horizontal, 12)
-                        .padding(.vertical, 6)
+                        .padding(.vertical, 3)
                         .background(Color.white.opacity(0.5))
                         .cornerRadius(8)
                     }
